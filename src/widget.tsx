@@ -252,11 +252,11 @@ class AudioVisualizer extends React.Component<any, AudioVisualState> {
 }
 
 /**
- * A Counter Lumino Widget that wraps a CounterComponent.
+ * A Lumino Widget that wraps an AudioVisualizer.
  */
 export class AudioVisualizerJupyter extends ReactWidget {
   /**
-   * Constructs a new CounterWidget.
+   * Constructs a new AudioVisualizer.
    */
   constructor() {
     super();
