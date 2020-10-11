@@ -20,6 +20,10 @@ To build the application, run the following command.
 	  jupyter labextension install . && \
 	  jupyter lab 
 
-The application is here: 
+The application is in the \"Other\" section of the launcher: 
+
+![picture of location of extension in jupyter](./location.png)
 
 Type a song into the search bar click a button to play the song: 
+
+![picture of extension](./screenshot.png)
