@@ -9,7 +9,7 @@ I found [this blogpost](http://ianreah.com/2013/02/28/Real-time-analysis-of-stre
 
 ## Setup 
 
-To build the application, run the following command:
+To build JupyterLab with the extension, run the following command:
 
 	git clone https://github.com/biniona/audio-visualizer-jupyter-lab-extension.git && \
 	  cd audio-visualizer-jupyter-lab-extension && \
@@ -20,7 +20,7 @@ To build the application, run the following command:
 	  jupyter labextension install . && \
 	  jupyter lab 
 
-The application is in the \"Other\" section of the launcher: 
+The extension is in the \"Other\" section of the launcher: 
 
 ![picture of location of extension in jupyter](./location.png)
 
