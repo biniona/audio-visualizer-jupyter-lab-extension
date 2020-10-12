@@ -22,7 +22,7 @@ namespace CommandIDs {
  * Initialization data for the react-widget extension.
  */
 const extension: JupyterFrontEndPlugin<void> = {
-  id: "react-widget",
+  id: "audio-visualizer-widget",
   autoStart: true,
   optional: [ILauncher],
   activate: (app: JupyterFrontEnd, launcher: ILauncher) => {
@@ -30,7 +30,7 @@ const extension: JupyterFrontEndPlugin<void> = {
 
     const command = CommandIDs.create;
     commands.addCommand(command, {
-      caption: "Create a new React Widget",
+      caption: "Create a new Audio Visualizer React Widget",
       label: "Audio Visualizer",
       icon: (args) => (args["isPalette"] ? null : reactIcon),
       execute: () => {
