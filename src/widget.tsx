@@ -222,7 +222,7 @@ class AudioVisualizer extends React.Component<any, AudioVisualState> {
           canvas_context.fillStyle = "#000000";
           canvas_context.fillRect(0, 0, 300, 300);
           let column_width = Math.ceil(
-            CANVAS_WIDTH / (this.state.spectrum.length * 2)
+            CANVAS_WIDTH / this.state.spectrum.length
           );
           let i = 0;
           for (const freq of Array.from(this.state.spectrum)) {
@@ -230,8 +230,8 @@ class AudioVisualizer extends React.Component<any, AudioVisualState> {
             canvas_context.fillRect(
               column_width * i,
               CANVAS_HEIGHT - freq,
-              column_width * (i + 1),
-              CANVAS_HEIGHT
+              column_width,
+              freq
             );
             i += 1;
           }
@@ -244,7 +244,7 @@ class AudioVisualizer extends React.Component<any, AudioVisualState> {
     this.updateCanvas();
     return (
       <div>
-        <canvas id="audio_canvas" width={300} height={300} />
+        <canvas id="audio_canvas" width={CANVAS_WIDTH} height={CANVAS_HEIGHT} />
         <DeezerSearch sendMusicURL={this.retrieve_audio_and_play} />
       </div>
     );
