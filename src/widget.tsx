@@ -83,7 +83,7 @@ class DeezerSearch extends React.Component<
             Search For Songs In Deezer: <br />
             <input
               type="text"
-              name="name"
+              className="deezer-input"
               onChange={this.searchDeezer}
               placeholder="Ex: Free Bird"
             />
@@ -98,7 +98,7 @@ class DeezerSearch extends React.Component<
                   this.props.sendMusicURL(song.preview);
                 }}
               >
-                {`${song.title} -- By: ${song.artist}`}
+                <span>{`${song.title} -- By: ${song.artist}`}</span>
               </button>
               <br />
             </div>
@@ -244,6 +244,7 @@ class AudioVisualizer extends React.Component<any, AudioVisualState> {
     this.updateCanvas();
     return (
       <div>
+        <h1>Audio Visualizer</h1>
         <canvas id="audio_canvas" width={CANVAS_WIDTH} height={CANVAS_HEIGHT} />
         <DeezerSearch sendMusicURL={this.retrieve_audio_and_play} />
       </div>
@@ -265,7 +266,7 @@ export class AudioVisualizerJupyter extends ReactWidget {
 
   render(): JSX.Element {
     return (
-      <div>
+      <div className="audio-visualizer-wrapper">
         <AudioVisualizer />
       </div>
     );

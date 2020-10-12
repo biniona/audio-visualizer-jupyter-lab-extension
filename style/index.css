@@ -6,4 +6,34 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: auto;
+}
+
+:root {
+  --audio-canvas-width: 300px;
+}
+
+#audio_canvas {
+	padding: 10px;
+}
+
+.audio-visualizer-wrapper{
+	padding-top: 40px;
+}
+
+.deezer-input{
+	margin: 30;
+}
+
+.deezer-song-button {
+	width: var(--audio-canvas-width);
+}
+
+/*make songs overflow with ellipses*/
+.deezer-song-button span{
+	width: var(--audio-canvas-width);
+	overflow: hidden;
+	white-space: nowrap;
+	display: block;
+	text-overflow: ellipsis;
 }
