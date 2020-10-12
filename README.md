@@ -24,6 +24,6 @@ The extension is in the \"Other\" section of the launcher:
 
 ![picture of location of extension in jupyter](./location.png)
 
-Type a query into the search bar and click a song button to play that song and see its frequency graph: 
+Type a query into the search bar and click a song button to play that song and see its frequency graph. There is a 1/2 second delay from the last keystroke until the query is ran. This is to try and avoid executing a large number of queries and quickly running into rate-limiting on the Deezer API.
 
 ![picture of extension](./screenshot.png)
